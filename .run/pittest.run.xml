@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="pittest" type="PIT" factoryName="PIT Runner" REPORT_DIR="$PROJECT_DIR$/target/report" SOURCE_DIRS="$PROJECT_DIR$/src/main/java" TARGET_CLASSES="elevator.ArrivalSensor,elevator.Elevator,elevator.ElevatorControl,elevator.ElevatorGroup,elevator.ElevatorInterface,elevator.Floor,elevator.FloorControl,elevator.FloorInterface" TARGET_TESTS="TestCaseRunner" otherParams="--outputFormats XML,HTML">
+    <module name="Elevator" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

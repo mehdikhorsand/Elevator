@@ -1,0 +1,24 @@
+New Elevator, ID #0
+elevatorID = 0
+Trying to start thread 0
+Running Thread #0
+New Elevator, ID #1
+elevatorID = 1
+Trying to start thread 1
+Running Thread #1
+New Elevator, ID #2
+elevatorID = 2
+Trying to start thread 2
+Running Thread #2
+New Elevator, ID #3
+elevatorID = 3
+Trying to start thread 3
+Running Thread #3
+elevator 1: Elevator is at requested floor.
+elevator 2: Elevator is at requested floor.
+elevator 2: Stop requested at floor 0
+No down requests are permitted at this floor.
+No down requests are permitted at this floor.
+elevator 4: Elevator is at requested floor.
+elevator 4: Stop requested at floor 0
+Shutting down the system.

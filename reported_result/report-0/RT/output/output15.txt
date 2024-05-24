@@ -1,0 +1,77 @@
+New Elevator, ID #0
+elevatorID = 0
+Trying to start thread 0
+Running Thread #0
+New Elevator, ID #1
+elevatorID = 1
+Trying to start thread 1
+Running Thread #1
+elevator 1: Stop requested at floor 3
+elevator 1: Door closed.
+elevator 1: Door is closed on floor 0.
+elevator 1: Moving from floor 0 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 1: Stop requested at floor 4
+elevator 1: Reached floor 1
+elevator 1: Moving from floor 1 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 1: Stop requested at floor 0
+elevator 1: Reached floor 2
+elevator 1: Moving from floor 2 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 1: Stop requested at floor 3
+elevator 1: Reached floor 3
+elevator 1: Motor stopped.
+elevator 1: Stopped.  
+elevator 1: Door open.
+elevator 1: Door is open on floor 3.
+elevator 2: Stop requested at floor 3
+elevator 2: Door closed.
+elevator 2: Door is closed on floor 0.
+elevator 1: Next Stop = floor 4
+elevator 1: Door closed.
+elevator 1: Door is closed on floor 3.
+elevator 2: Moving from floor 0 in direction 1
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 1: Moving from floor 3 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 2: Reached floor 1
+elevator 2: Moving from floor 1 in direction 1
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 1: Reached floor 4
+elevator 1: Motor stopped.
+elevator 1: Stopped.  
+elevator 1: Door open.
+elevator 1: Door is open on floor 4.
+Elevator going DOWN has arrived at floor 4.
+elevator 1: Next Stop = floor 0
+elevator 1: Door closed.
+elevator 1: Door is closed on floor 4.
+elevator 2: Reached floor 2
+elevator 2: Moving from floor 2 in direction 1
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 1: Moving from floor 4 in direction -1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 2: Reached floor 3
+elevator 2: Motor stopped.
+elevator 2: Stopped.  
+elevator 2: Door open.
+elevator 2: Door is open on floor 3.
+elevator 1: Reached floor 3
+elevator 1: Moving from floor 3 in direction -1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 2: All stops handled.  Idling.
+elevator 1: Reached floor 2
+elevator 1: Moving from floor 2 in direction -1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 1: Reached floor 1
+elevator 1: Moving from floor 1 in direction -1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 1: Reached floor 0
+elevator 1: Motor stopped.
+elevator 1: Stopped.  
+elevator 1: Door open.
+elevator 1: Door is open on floor 0.
+Elevator going UP has arrived at floor 0.
+elevator 1: All stops handled.  Idling.
+Shutting down the system.

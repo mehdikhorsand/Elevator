@@ -1,0 +1,36 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f053919b55a, pid=7292, tid=7312
+#
+# JRE version: OpenJDK Runtime Environment JBR-17.0.9+8-1166.2-nomod (17.0.9+8) (build 17.0.9+8-b1166.2)
+# Java VM: OpenJDK 64-Bit Server VM JBR-17.0.9+8-1166.2-nomod (17.0.9+8-b1166.2, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjdwp.so+0x2d55a]  jvmtiDeallocate+0x2a
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h" (or dumping to /home/mehdi/IdeaProjects/Elevator/core.7292)
+#
+# If you would like to submit a bug report, please visit:
+#   https://youtrack.jetbrains.com/issues/JBR
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:38443,suspend=y,server=n -javaagent:/usr/share/idea/plugins/java/lib/rt/debugger-agent.jar -Dfile.encoding=UTF-8 main.Main
+
+Host: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 8 cores, 15G, Manjaro Linux
+Time: Fri May 17 16:21:46 2024 +0330 elapsed time: 0.503693 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f0530332bc0):  JavaThread "JDWP Event Helper Thread" daemon [_thread_in_native, id=7312, stack(0x00007f04f3700000,0x00007f04f3800000)]
+
+Stack: [0x00007f04f3700000,0x00007f04f3800000],  sp=0x00007f04f37fed30,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjdwp.so+0x2d55a]  jvmtiDeallocate+0x2a
+C  [libjdwp.so+0x1b40d]  commandLoop+0xed
+V  [libjvm.so+0xa4357f]  JvmtiAgentThread::call_start_function()+0x6f
+V  [libjvm.so+0xe6403b]  JavaThread::thread_main_inner()+0xdb
+V  [libjvm.so+0xe67940]

@@ -1,0 +1,7 @@
+StartGroup	12	3
+RequestStop 11 2
+RequestStop 5 0
+RequestUp 11
+RequestStop 1 2
+RequestDown 4
+StopGroup

@@ -1,0 +1,333 @@
+Coverage Report
+ArrivalSensor Class
+===========================
+	Node Coverage
+	-------------
+		getTheFloor, Line 42: return floor; not covered. 
+		getTheFloor, Line 43: } not covered. 
+		stopAtThisFloor, Line 32: elevator = elevator.selectElevator(elevatorID); not covered.
+		stopAtThisFloor, Line 36: } not covered. 
+	33.33333333333333% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at stopAtThisFloor, Line 32: elevator = elevator.selectElevator(elevatorID); and ending at stopAtThisFloor, Line 36: } not covered.
+		 Edge starting at getTheFloor, Line 42: return floor; and ending at getTheFloor, Line 43: } not covered. 
+	33.33333333333333% edges covered.
+
+elevator Class
+===========================
+	Node Coverage
+	-------------
+		notifyNewFloor, Line 128: return false; not covered. 
+		getDoorOpen, Line 339: return doorOpen; not covered. 
+		getStop, Line 354: return stops[i]; not covered. 
+		getStop, Line 355: } not covered. 
+		motorStop, Line 231: ec = null; not covered. 
+		motorStop, Line 228: ElevatorControl ec = new ElevatorControl(this); not covered. 
+		getNextDestination, Line 190: while (this.state==FINDNEXT) { not covered. 
+		getNextDestination, Line 191: if (nStops == 0) { not covered. 
+		getNextDestination, Line 192: this.state = elevator.IDLE; not covered.
+		getNextDestination, Line 198: while (Floor.selectFloor(stopToCheck)!=null && state==FINDNEXT) { not covered. 
+		getNextDestination, Line 199: if (stops[stopToCheck]==true) { not covered. 
+		getNextDestination, Line 202: return stopToCheck; not covered. 
+		getNextDestination, Line 204: stopToCheck += direction; not covered. 
+		getNextDestination, Line 207: if (Floor.selectFloor(stopToCheck)==null && state == FINDNEXT) { not covered. 
+		getNextDestination, Line 208: direction = -direction; not covered. 
+		getBestElevator, Line 88: if ((testElevator.getFloor().getFloorID() - floorID) * testElevator.direction <=0) { not covered. 
+		getBestElevator, Line 90: bestElevator=testElevator; not covered. 
+		getBestElevator, Line 89: if ((bestElevator.getFloor().getFloorID() - floorID) * bestElevator.direction > 0) { not covered. 
+		getBestElevator, Line 95: bestElevator=testElevator; not covered. 
+		getBestElevator, Line 94: if (testDistance<bestDistance) not covered. 
+		closeDoor, Line 254: catch (InterruptedException e) { not covered. 
+		notifyNewFloor, Line 126: motorMoveDown(); not covered. 
+		notifyNewFloor, Line 124: motorMoveUp(); not covered. 
+		notifyNewFloor, Line 123: if (direction==1) { not covered. 
+		notifyNewFloor, Line 120: stopElevator(); not covered. 
+		getDoorOpen, Line 340: } not covered. 
+		getNumberOfStops, Line 358: return nStops; not covered. 
+		getNumberOfStops, Line 359: } not covered. 
+		notifyNewFloor, Line 113: if (stops[newFloor.getFloorID()] == true) { not covered. 
+		notifyNewFloor, Line 119: else if((newFloor.requestDownMade()) && (direction == -1)) { not covered. 
+		notifyNewFloor, Line 117: stopElevator(); not covered. 
+		notifyNewFloor, Line 116: } else if((newFloor.requestUpMade()) && (direction == 1)) { not covered. 
+		notifyNewFloor, Line 114: stopElevator(); not covered. 
+		addStop, Line 277: direction = -1; not covered. 
+		addStop, Line 282: ElevatorGroup.elevatorDisplay(elevatorID+1, elevator is at requested floor.); not covered.
+		addStop, Line 286: stops[floorID] = stopState; not covered. 
+		stopElevator, Line 222: addStop(currentFloor.getFloorID(),false); not covered. 
+		stopElevator, Line 217: state=FINDNEXT; not covered. 
+		getBestElevator, Line 86: bestElevator=testElevator; not covered. 
+		getBestElevator, Line 87: else if (bestElevator.getState()!=elevator.IDLE && testElevator.getState()!=elevator.IDLE) { not covered.
+		openDoor, Line 244: } not covered. 
+		getDirection, Line 311: return direction; not covered. 
+		getDirection, Line 312: } not covered. 
+		moveElevator, Line 184: getNextDestination(); not covered. 
+		openDoor, Line 241: Thread.sleep(1000); not covered. 
+		openDoor, Line 242: catch (InterruptedException e) { not covered. 
+		motorMoveDown, Line 139: ec = null; not covered. 
+		motorMoveDown, Line 136: ElevatorControl ec = new ElevatorControl(this); not covered. 
+		getNextDestination, Line 209: } not covered. 
+		getNextDestination, Line 211: return -1; not covered. 
+		moveElevator, Line 180: Thread.sleep(500); not covered. 
+		moveElevator, Line 179: try { not covered. 
+		moveElevator, Line 177: while (this.state==MOVING) { not covered. 
+		moveElevator, Line 172: motorMoveDown(); not covered. 
+		moveElevator, Line 183: } not covered. 
+		moveElevator, Line 181: catch (Exception e) { not covered. 
+		getMotorMoving, Line 346: return motorMoving; not covered. 
+		getMotorMoving, Line 347: } not covered. 
+	43.13725490196079% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at getBestElevator, Line 80: else if (bestElevator.getState() != elevator.IDLE && testElevator.getState() == elevator.IDLE) and ending at getBestElevator, Line 81: bestElevator=testElevator; not covered.
+		 Edge starting at getBestElevator, Line 80: else if (bestElevator.getState() != elevator.IDLE && testElevator.getState() == elevator.IDLE) and ending at getBestElevator, Line 82: else if (bestElevator.getState() == elevator.IDLE && testElevator.getState() == elevator.IDLE) { not covered.
+		 Edge starting at getBestElevator, Line 82: else if (bestElevator.getState() == elevator.IDLE && testElevator.getState() == elevator.IDLE) { and ending at getBestElevator, Line 85: if (testDistance<bestDistance) not covered.
+		 Edge starting at getBestElevator, Line 82: else if (bestElevator.getState() == elevator.IDLE && testElevator.getState() == elevator.IDLE) { and ending at getBestElevator, Line 87: else if (bestElevator.getState()!=elevator.IDLE && testElevator.getState()!=elevator.IDLE) { not covered.
+		 Edge starting at getBestElevator, Line 85: if (testDistance<bestDistance) and ending at getBestElevator, Line 86: bestElevator=testElevator; not covered. 
+		 Edge starting at getBestElevator, Line 86: bestElevator=testElevator; and ending at getBestElevator, Line 98: } not covered. 
+		 Edge starting at getBestElevator, Line 87: else if (bestElevator.getState()!=elevator.IDLE && testElevator.getState()!=elevator.IDLE) { and ending at getBestElevator, Line 88: if ((testElevator.getFloor().getFloorID() - floorID) * testElevator.direction <=0) { not covered.
+		 Edge starting at getBestElevator, Line 87: else if (bestElevator.getState()!=elevator.IDLE && testElevator.getState()!=elevator.IDLE) { and ending at getBestElevator, Line 98: } not covered.
+		 Edge starting at getBestElevator, Line 88: if ((testElevator.getFloor().getFloorID() - floorID) * testElevator.direction <=0) { and ending at getBestElevator, Line 89: if ((bestElevator.getFloor().getFloorID() - floorID) * bestElevator.direction > 0) { not covered. 
+		 Edge starting at getBestElevator, Line 88: if ((testElevator.getFloor().getFloorID() - floorID) * testElevator.direction <=0) { and ending at getBestElevator, Line 98: } not covered. 
+		 Edge starting at getBestElevator, Line 89: if ((bestElevator.getFloor().getFloorID() - floorID) * bestElevator.direction > 0) { and ending at getBestElevator, Line 90: bestElevator=testElevator; not covered. 
+		 Edge starting at getBestElevator, Line 89: if ((bestElevator.getFloor().getFloorID() - floorID) * bestElevator.direction > 0) { and ending at getBestElevator, Line 94: if (testDistance<bestDistance) not covered. 
+		 Edge starting at getBestElevator, Line 90: bestElevator=testElevator; and ending at getBestElevator, Line 98: } not covered. 
+		 Edge starting at getBestElevator, Line 94: if (testDistance<bestDistance) and ending at getBestElevator, Line 95: bestElevator=testElevator; not covered. 
+		 Edge starting at getBestElevator, Line 95: bestElevator=testElevator; and ending at getBestElevator, Line 98: } not covered. 
+		 Edge starting at getBestElevator, Line 94: if (testDistance<bestDistance) and ending at getBestElevator, Line 98: } not covered. 
+		 Edge starting at notifyNewFloor, Line 113: if (stops[newFloor.getFloorID()] == true) { and ending at notifyNewFloor, Line 114: stopElevator(); not covered. 
+		 Edge starting at notifyNewFloor, Line 113: if (stops[newFloor.getFloorID()] == true) { and ending at notifyNewFloor, Line 116: } else if((newFloor.requestUpMade()) && (direction == 1)) { not covered. 
+		 Edge starting at notifyNewFloor, Line 116: } else if((newFloor.requestUpMade()) && (direction == 1)) { and ending at notifyNewFloor, Line 117: stopElevator(); not covered. 
+		 Edge starting at notifyNewFloor, Line 116: } else if((newFloor.requestUpMade()) && (direction == 1)) { and ending at notifyNewFloor, Line 119: else if((newFloor.requestDownMade()) && (direction == -1)) { not covered. 
+		 Edge starting at notifyNewFloor, Line 119: else if((newFloor.requestDownMade()) && (direction == -1)) { and ending at notifyNewFloor, Line 120: stopElevator(); not covered. 
+		 Edge starting at notifyNewFloor, Line 119: else if((newFloor.requestDownMade()) && (direction == -1)) { and ending at notifyNewFloor, Line 123: if (direction==1) { not covered. 
+		 Edge starting at notifyNewFloor, Line 123: if (direction==1) { and ending at notifyNewFloor, Line 124: motorMoveUp(); not covered. 
+		 Edge starting at notifyNewFloor, Line 123: if (direction==1) { and ending at notifyNewFloor, Line 126: motorMoveDown(); not covered. 
+		 Edge starting at notifyNewFloor, Line 124: motorMoveUp(); and ending at notifyNewFloor, Line 128: return false; not covered. 
+		 Edge starting at notifyNewFloor, Line 126: motorMoveDown(); and ending at notifyNewFloor, Line 128: return false; not covered. 
+		 Edge starting at motorMoveDown, Line 136: ElevatorControl ec = new ElevatorControl(this); and ending at motorMoveDown, Line 139: ec = null; not covered. 
+		 Edge starting at stopElevator, Line 217: state=FINDNEXT; and ending at stopElevator, Line 222: addStop(currentFloor.getFloorID(),false); not covered. 
+		 Edge starting at motorStop, Line 228: ElevatorControl ec = new ElevatorControl(this); and ending at motorStop, Line 231: ec = null; not covered. 
+		 Edge starting at openDoor, Line 241: Thread.sleep(1000); and ending at openDoor, Line 242: catch (InterruptedException e) { not covered. 
+		 Edge starting at openDoor, Line 241: Thread.sleep(1000); and ending at openDoor, Line 244: } not covered. 
+		 Edge starting at openDoor, Line 242: catch (InterruptedException e) { and ending at openDoor, Line 244: } not covered. 
+		 Edge starting at closeDoor, Line 253: Thread.sleep(1000); and ending at closeDoor, Line 254: catch (InterruptedException e) { not covered. 
+		 Edge starting at closeDoor, Line 254: catch (InterruptedException e) { and ending at closeDoor, Line 256: } not covered. 
+		 Edge starting at moveElevator, Line 165: if (this.state == PREPARE) { and ending at moveElevator, Line 169: if (direction==1) { not covered. 
+		 Edge starting at moveElevator, Line 169: if (direction==1) { and ending at moveElevator, Line 170: motorMoveUp(); not covered. 
+		 Edge starting at moveElevator, Line 169: if (direction==1) { and ending at moveElevator, Line 172: motorMoveDown(); not covered. 
+		 Edge starting at moveElevator, Line 170: motorMoveUp(); and ending at moveElevator, Line 177: while (this.state==MOVING) { not covered. 
+		 Edge starting at moveElevator, Line 172: motorMoveDown(); and ending at moveElevator, Line 177: while (this.state==MOVING) { not covered. 
+		 Edge starting at moveElevator, Line 165: if (this.state == PREPARE) { and ending at moveElevator, Line 177: while (this.state==MOVING) { not covered. 
+		 Edge starting at moveElevator, Line 177: while (this.state==MOVING) { and ending at moveElevator, Line 179: try { not covered. 
+		 Edge starting at moveElevator, Line 177: while (this.state==MOVING) { and ending at moveElevator, Line 184: getNextDestination(); not covered. 
+		 Edge starting at moveElevator, Line 179: try { and ending at moveElevator, Line 180: Thread.sleep(500); not covered. 
+		 Edge starting at moveElevator, Line 180: Thread.sleep(500); and ending at moveElevator, Line 181: catch (Exception e) { not covered. 
+		 Edge starting at moveElevator, Line 180: Thread.sleep(500); and ending at moveElevator, Line 183: } not covered. 
+		 Edge starting at moveElevator, Line 181: catch (Exception e) { and ending at moveElevator, Line 183: } not covered. 
+		 Edge starting at moveElevator, Line 183: } and ending at moveElevator, Line 177: while (this.state==MOVING) { not covered. 
+		 Edge starting at getNextDestination, Line 190: while (this.state==FINDNEXT) { and ending at getNextDestination, Line 191: if (nStops == 0) { not covered. 
+		 Edge starting at getNextDestination, Line 190: while (this.state==FINDNEXT) { and ending at getNextDestination, Line 211: return -1; not covered. 
+		 Edge starting at getNextDestination, Line 191: if (nStops == 0) { and ending at getNextDestination, Line 192: this.state = elevator.IDLE; not covered.
+		 Edge starting at getNextDestination, Line 191: if (nStops == 0) { and ending at getNextDestination, Line 198: while (Floor.selectFloor(stopToCheck)!=null && state==FINDNEXT) { not covered. 
+		 Edge starting at getNextDestination, Line 198: while (Floor.selectFloor(stopToCheck)!=null && state==FINDNEXT) { and ending at getNextDestination, Line 199: if (stops[stopToCheck]==true) { not covered. 
+		 Edge starting at getNextDestination, Line 198: while (Floor.selectFloor(stopToCheck)!=null && state==FINDNEXT) { and ending at getNextDestination, Line 207: if (Floor.selectFloor(stopToCheck)==null && state == FINDNEXT) { not covered. 
+		 Edge starting at getNextDestination, Line 199: if (stops[stopToCheck]==true) { and ending at getNextDestination, Line 202: return stopToCheck; not covered. 
+		 Edge starting at getNextDestination, Line 199: if (stops[stopToCheck]==true) { and ending at getNextDestination, Line 204: stopToCheck += direction; not covered. 
+		 Edge starting at getNextDestination, Line 204: stopToCheck += direction; and ending at getNextDestination, Line 198: while (Floor.selectFloor(stopToCheck)!=null && state==FINDNEXT) { not covered. 
+		 Edge starting at getNextDestination, Line 207: if (Floor.selectFloor(stopToCheck)==null && state == FINDNEXT) { and ending at getNextDestination, Line 208: direction = -direction; not covered. 
+		 Edge starting at getNextDestination, Line 208: direction = -direction; and ending at getNextDestination, Line 209: } not covered. 
+		 Edge starting at getNextDestination, Line 207: if (Floor.selectFloor(stopToCheck)==null && state == FINDNEXT) { and ending at getNextDestination, Line 209: } not covered. 
+		 Edge starting at getNextDestination, Line 209: } and ending at getNextDestination, Line 190: while (this.state==FINDNEXT) { not covered. 
+		 Edge starting at addStop, Line 268: if (stopState) { and ending at addStop, Line 286: stops[floorID] = stopState; not covered. 
+		 Edge starting at addStop, Line 269: if ((floorID != currentFloor.getFloorID()) || (this.getState() == elevator.MOVING)) { and ending at addStop, Line 282: ElevatorGroup.elevatorDisplay(elevatorID+1, elevator is at requested floor.); not covered.
+		 Edge starting at addStop, Line 273: if (this.currentFloor.getFloorID()<floorID) { and ending at addStop, Line 277: direction = -1; not covered. 
+		 Edge starting at addStop, Line 277: direction = -1; and ending at addStop, Line 289: } not covered. 
+		 Edge starting at addStop, Line 286: stops[floorID] = stopState; and ending at addStop, Line 289: } not covered. 
+		 Edge starting at addStop, Line 282: ElevatorGroup.elevatorDisplay(elevatorID+1, elevator is at requested floor.); and ending at addStop, Line 289: } not covered.
+		 Edge starting at run, Line 295: if (this.state==elevator.IDLE) { and ending at run, Line 296: Thread.sleep(500);  not covered.
+		 Edge starting at run, Line 296: Thread.sleep(500);  and ending at run, Line 300: moveElevator(); not covered. 
+		 Edge starting at getDirection, Line 311: return direction; and ending at getDirection, Line 312: } not covered. 
+		 Edge starting at getDoorOpen, Line 339: return doorOpen; and ending at getDoorOpen, Line 340: } not covered. 
+		 Edge starting at getMotorMoving, Line 346: return motorMoving; and ending at getMotorMoving, Line 347: } not covered. 
+		 Edge starting at getStop, Line 354: return stops[i]; and ending at getStop, Line 355: } not covered. 
+		 Edge starting at getNumberOfStops, Line 358: return nStops; and ending at getNumberOfStops, Line 359: } not covered. 
+	29.807692307692307% edges covered.
+
+ElevatorControl Class
+===========================
+	Node Coverage
+	-------------
+		motorStop, Line 80: ei.motorStop(); not covered. 
+		stopElevator, Line 30: myElevator.stopElevator(); not covered. 
+		stopElevator, Line 31: } not covered. 
+		motorStop, Line 81: } not covered. 
+		closeDoor, Line 44: myElevator.closeDoor(); not covered. 
+		closeDoor, Line 45: } not covered. 
+		openDoor, Line 37: myElevator.openDoor(); not covered. 
+		openDoor, Line 38: } not covered. 
+		motorMoveDown, Line 67: } not covered. 
+		motorMoveDown, Line 66: ei.motorMoveDown(); not covered. 
+	50.0% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at stopElevator, Line 30: myElevator.stopElevator(); and ending at stopElevator, Line 31: } not covered. 
+		 Edge starting at openDoor, Line 37: myElevator.openDoor(); and ending at openDoor, Line 38: } not covered. 
+		 Edge starting at closeDoor, Line 44: myElevator.closeDoor(); and ending at closeDoor, Line 45: } not covered. 
+		 Edge starting at motorMoveDown, Line 66: ei.motorMoveDown(); and ending at motorMoveDown, Line 67: } not covered. 
+		 Edge starting at motorStop, Line 80: ei.motorStop(); and ending at motorStop, Line 81: } not covered. 
+	50.0% edges covered.
+
+ElevatorGroup Class
+===========================
+	Node Coverage
+	-------------
+		getGroup, Line 28: return theGroup; not covered. 
+		motorMoving, Line 104: System.out.println(Exception in motorMoving.); not covered. 
+		getElevatorInterface, Line 134: System.out.println(No Such floor.); not covered. 
+		motorMoving, Line 100: ElevatorGroup.elevatorDisplay(elevatorID + 1, Moving from floor  +(currentFloor)+ in direction + direction); not covered. 
+		motorMoving, Line 106: fli[currentFloor].stopAtThisFloor(elevatorID, currentFloor+direction); not covered. 
+	82.75862068965517% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at getGroup, Line 24: if (theGroup == null) { and ending at getGroup, Line 28: return theGroup; not covered. 
+		 Edge starting at startThread, Line 54: if(threadStarted[threadNum] == false){ and ending at startThread, Line 58: } not covered. 
+		 Edge starting at stopGroup, Line 67: if(threadStarted[i] == true) { and ending at stopGroup, Line 71: } not covered. 
+		 Edge starting at startGroup, Line 85: for (int i = 0; i < numElevators; i++) { and ending at startGroup, Line 92: } not covered. 
+		 Edge starting at motorMoving, Line 100: ElevatorGroup.elevatorDisplay(elevatorID + 1, Moving from floor  +(currentFloor)+ in direction + direction); and ending at motorMoving, Line 104: System.out.println(Exception in motorMoving.); not covered. 
+		 Edge starting at motorMoving, Line 100: ElevatorGroup.elevatorDisplay(elevatorID + 1, Moving from floor  +(currentFloor)+ in direction + direction); and ending at motorMoving, Line 106: fli[currentFloor].stopAtThisFloor(elevatorID, currentFloor+direction); not covered. 
+		 Edge starting at motorMoving, Line 104: System.out.println(Exception in motorMoving.); and ending at motorMoving, Line 106: fli[currentFloor].stopAtThisFloor(elevatorID, currentFloor+direction); not covered. 
+		 Edge starting at getElevatorInterface, Line 131: if (elevatorID >=0 && elevatorID < ElevatorGroup.numElevators) and ending at getElevatorInterface, Line 134: System.out.println(No Such floor.); not covered. 
+	69.23076923076923% edges covered.
+
+ElevatorInterface Class
+===========================
+	Node Coverage
+	-------------
+		motorStop, Line 77: ElevatorGroup.elevatorDisplay(elevatorID + 1, Motor stopped.); not covered. 
+		getElevatorID, Line 55: return elevatorID; not covered. 
+		getElevatorID, Line 56: } not covered. 
+		motorStop, Line 78: } not covered. 
+		getFromList, Line 35: return null; not covered. 
+		motorMoveDown, Line 63: } not covered. 
+		motorMoveDown, Line 61: ElevatorGroup group = ElevatorGroup.getGroup(ElevatorGroup.numElevators, ElevatorGroup.numFloors); not covered. 
+	63.1578947368421% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at getFromList, Line 31: for (Enumeration e = list.elements(); e.hasMoreElements();) { and ending at getFromList, Line 35: return null; not covered. 
+		 Edge starting at getElevatorID, Line 55: return elevatorID; and ending at getElevatorID, Line 56: } not covered. 
+		 Edge starting at motorMoveDown, Line 61: ElevatorGroup group = ElevatorGroup.getGroup(ElevatorGroup.numElevators, ElevatorGroup.numFloors); and ending at motorMoveDown, Line 63: } not covered. 
+		 Edge starting at motorStop, Line 77: ElevatorGroup.elevatorDisplay(elevatorID + 1, Motor stopped.); and ending at motorStop, Line 78: } not covered. 
+	71.42857142857143% edges covered.
+
+Floor Class
+===========================
+	Node Coverage
+	-------------
+		getSensor, Line 164: return arrivalsensor; not covered. 
+		getSensor, Line 165: } not covered. 
+		requestUpMade, Line 116: if(upButtonPressed == true) { not covered. 
+		requestUpServiced, Line 140: System.out.println(elevator going UP has arrived at floor  + floorID+ .); not covered.
+		requestUpServiced, Line 142: } not covered. 
+		requestUpMade, Line 119: return false; not covered. 
+		requestUpMade, Line 117: return true; not covered. 
+		requestDownMade, Line 129: return true; not covered. 
+		requestDownMade, Line 128: if (downButtonPressed == true) { not covered. 
+		requestDownServiced, Line 151: } not covered. 
+		requestDown, Line 106: elevator.addStop(floorID,true); not covered.
+		requestDownServiced, Line 149: System.out.println(elevator going DOWN has arrived at floor  + floorID+ .); not covered.
+		requestUp, Line 76: System.out.println(No up requests are permitted at this floor.); not covered. 
+		requestUp, Line 83: elevator.addStop(floorID,true); not covered.
+		requestDownMade, Line 131: return false; not covered. 
+		selectFloor, Line 55: return null; not covered. 
+		requestDown, Line 99: System.out.println(No down requests are permitted at this floor.); not covered. 
+	52.77777777777778% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at selectFloor, Line 52: if ((floorID < numFloors) && (floorID > -1)) { and ending at selectFloor, Line 55: return null; not covered. 
+		 Edge starting at requestUpMade, Line 116: if(upButtonPressed == true) { and ending at requestUpMade, Line 117: return true; not covered. 
+		 Edge starting at requestUpMade, Line 116: if(upButtonPressed == true) { and ending at requestUpMade, Line 119: return false; not covered. 
+		 Edge starting at requestUp, Line 75: if (floorID == ElevatorGroup.numFloors-1) { and ending at requestUp, Line 76: System.out.println(No up requests are permitted at this floor.); not covered. 
+		 Edge starting at requestUp, Line 75: if (floorID == ElevatorGroup.numFloors-1) { and ending at requestUp, Line 77: } else if (elevator.getFloor().getFloorID() != this.getFloorID()){ not covered.
+		 Edge starting at requestUp, Line 76: System.out.println(No up requests are permitted at this floor.); and ending at requestUp, Line 85: return elevator; not covered.
+		 Edge starting at requestUp, Line 77: } else if (elevator.getFloor().getFloorID() != this.getFloorID()){ and ending at requestUp, Line 78: System.out.println(Request for elevator going UP made at floor  + floorID); not covered.
+		 Edge starting at requestUp, Line 77: } else if (elevator.getFloor().getFloorID() != this.getFloorID()){ and ending at requestUp, Line 83: elevator.addStop(floorID,true); not covered.
+		 Edge starting at requestUp, Line 78: System.out.println(Request for elevator going UP made at floor  + floorID); and ending at requestUp, Line 85: return elevator; not covered.
+		 Edge starting at requestUp, Line 83: elevator.addStop(floorID,true); and ending at requestUp, Line 85: return elevator; not covered.
+		 Edge starting at requestDown, Line 98: if (floorID == 0) { and ending at requestDown, Line 99: System.out.println(No down requests are permitted at this floor.); not covered. 
+		 Edge starting at requestDown, Line 98: if (floorID == 0) { and ending at requestDown, Line 100: } else if (elevator.getFloor().getFloorID() != this.getFloorID()){ not covered.
+		 Edge starting at requestDown, Line 99: System.out.println(No down requests are permitted at this floor.); and ending at requestDown, Line 108: return elevator; not covered.
+		 Edge starting at requestDown, Line 100: } else if (elevator.getFloor().getFloorID() != this.getFloorID()){ and ending at requestDown, Line 101: System.out.println(Request for elevator going DOWN made at floor  + floorID); not covered.
+		 Edge starting at requestDown, Line 100: } else if (elevator.getFloor().getFloorID() != this.getFloorID()){ and ending at requestDown, Line 106: elevator.addStop(floorID,true); not covered.
+		 Edge starting at requestDown, Line 101: System.out.println(Request for elevator going DOWN made at floor  + floorID); and ending at requestDown, Line 108: return elevator; not covered.
+		 Edge starting at requestDown, Line 106: elevator.addStop(floorID,true); and ending at requestDown, Line 108: return elevator; not covered.
+		 Edge starting at requestDownMade, Line 128: if (downButtonPressed == true) { and ending at requestDownMade, Line 129: return true; not covered. 
+		 Edge starting at requestDownMade, Line 128: if (downButtonPressed == true) { and ending at requestDownMade, Line 131: return false; not covered. 
+		 Edge starting at requestUpServiced, Line 140: System.out.println(elevator going UP has arrived at floor  + floorID+ .); and ending at requestUpServiced, Line 142: } not covered.
+		 Edge starting at requestDownServiced, Line 149: System.out.println(elevator going DOWN has arrived at floor  + floorID+ .); and ending at requestDownServiced, Line 151: } not covered.
+		 Edge starting at getSensor, Line 164: return arrivalsensor; and ending at getSensor, Line 165: } not covered. 
+	24.137931034482758% edges covered.
+
+FloorControl Class
+===========================
+	Node Coverage
+	-------------
+		stopAtThisFloor, Line 56: } else if(floor.getFloorID() == Floor.getNoFloors()-1) { not covered. 
+		stopAtThisFloor, Line 55: floor.requestUpServiced(); not covered. 
+		stopAtThisFloor, Line 59: if(elevator.getDirection()  == -1) { not covered.
+		stopAtThisFloor, Line 57: floor.requestDownServiced(); not covered. 
+		stopAtThisFloor, Line 54: if(floor.getFloorID() == 0){ not covered. 
+		stopAtThisFloor, Line 53: if(stop == true){ not covered. 
+		stopAtThisFloor, Line 61: floor.requestDownServiced(); not covered. 
+		stopAtThisFloor, Line 60: if(floor.requestDownMade() == true) { not covered. 
+		stopAtThisFloor, Line 63: else if(elevator.getDirection() == 1) { not covered.
+		stopAtThisFloor, Line 69: } not covered. 
+		stopAtThisFloor, Line 64: if(floor.requestUpMade() == true) { not covered. 
+		stopAtThisFloor, Line 65: floor.requestUpServiced(); not covered. 
+	33.33333333333333% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at stopAtThisFloor, Line 53: if(stop == true){ and ending at stopAtThisFloor, Line 54: if(floor.getFloorID() == 0){ not covered. 
+		 Edge starting at stopAtThisFloor, Line 54: if(floor.getFloorID() == 0){ and ending at stopAtThisFloor, Line 55: floor.requestUpServiced(); not covered. 
+		 Edge starting at stopAtThisFloor, Line 53: if(stop == true){ and ending at stopAtThisFloor, Line 69: } not covered. 
+		 Edge starting at stopAtThisFloor, Line 54: if(floor.getFloorID() == 0){ and ending at stopAtThisFloor, Line 56: } else if(floor.getFloorID() == Floor.getNoFloors()-1) { not covered. 
+		 Edge starting at stopAtThisFloor, Line 56: } else if(floor.getFloorID() == Floor.getNoFloors()-1) { and ending at stopAtThisFloor, Line 57: floor.requestDownServiced(); not covered. 
+		 Edge starting at stopAtThisFloor, Line 56: } else if(floor.getFloorID() == Floor.getNoFloors()-1) { and ending at stopAtThisFloor, Line 59: if(elevator.getDirection()  == -1) { not covered.
+		 Edge starting at stopAtThisFloor, Line 59: if(elevator.getDirection()  == -1) { and ending at stopAtThisFloor, Line 60: if(floor.requestDownMade() == true) { not covered.
+		 Edge starting at stopAtThisFloor, Line 60: if(floor.requestDownMade() == true) { and ending at stopAtThisFloor, Line 61: floor.requestDownServiced(); not covered. 
+		 Edge starting at stopAtThisFloor, Line 59: if(elevator.getDirection()  == -1) { and ending at stopAtThisFloor, Line 63: else if(elevator.getDirection() == 1) { not covered.
+		 Edge starting at stopAtThisFloor, Line 63: else if(elevator.getDirection() == 1) { and ending at stopAtThisFloor, Line 64: if(floor.requestUpMade() == true) { not covered.
+		 Edge starting at stopAtThisFloor, Line 64: if(floor.requestUpMade() == true) { and ending at stopAtThisFloor, Line 65: floor.requestUpServiced(); not covered. 
+		 Edge starting at stopAtThisFloor, Line 65: floor.requestUpServiced(); and ending at stopAtThisFloor, Line 69: } not covered. 
+		 Edge starting at stopAtThisFloor, Line 61: floor.requestDownServiced(); and ending at stopAtThisFloor, Line 69: } not covered. 
+		 Edge starting at stopAtThisFloor, Line 57: floor.requestDownServiced(); and ending at stopAtThisFloor, Line 69: } not covered. 
+		 Edge starting at stopAtThisFloor, Line 55: floor.requestUpServiced(); and ending at stopAtThisFloor, Line 69: } not covered. 
+		 Edge starting at stopAtThisFloor, Line 63: else if(elevator.getDirection() == 1) { and ending at stopAtThisFloor, Line 69: } not covered.
+		 Edge starting at stopAtThisFloor, Line 64: if(floor.requestUpMade() == true) { and ending at stopAtThisFloor, Line 69: } not covered. 
+	15.0% edges covered.
+
+FloorInterface Class
+===========================
+	Node Coverage
+	-------------
+		requestUp, Line 33: System.out.println(No such floor  + floorID + .); not covered. 
+		stopAtThisFloor, Line 62: fc = new FloorControl(sensor); not covered. 
+		stopAtThisFloor, Line 65: } not covered. 
+		getFloor, Line 71: return sensor.getTheFloor(); not covered. 
+		getFloor, Line 72: } not covered. 
+	64.28571428571429% nodes covered.
+
+	Edge Coverage
+	-------------
+		 Edge starting at requestUp, Line 28: if (floorID >=0 && floorID < ElevatorGroup.numFloors) { and ending at requestUp, Line 33: System.out.println(No such floor  + floorID + .); not covered. 
+		 Edge starting at requestUp, Line 33: System.out.println(No such floor  + floorID + .); and ending at requestUp, Line 35: } not covered. 
+		 Edge starting at stopAtThisFloor, Line 62: fc = new FloorControl(sensor); and ending at stopAtThisFloor, Line 65: } not covered. 
+		 Edge starting at getFloor, Line 71: return sensor.getTheFloor(); and ending at getFloor, Line 72: } not covered. 
+	63.63636363636363% edges covered.

@@ -1,0 +1,119 @@
+New Elevator, ID #0
+elevatorID = 0
+Trying to start thread 0
+Running Thread #0
+New Elevator, ID #1
+elevatorID = 1
+Trying to start thread 1
+Running Thread #1
+New Elevator, ID #2
+elevatorID = 2
+Trying to start thread 2
+Running Thread #2
+New Elevator, ID #3
+elevatorID = 3
+Trying to start thread 3
+Running Thread #3
+New Elevator, ID #4
+elevatorID = 4
+Trying to start thread 4
+Running Thread #4
+elevator 5: Stop requested at floor 1
+elevator 5: Door closed.
+elevator 5: Door is closed on floor 0.
+elevator 5: Moving from floor 0 in direction 1
+elevator 5: Motor moving, sleeping to cause delay....
+Request for elevator going DOWN made at floor 3
+Best Elevator is: 1
+Stop added at 3
+elevator 1: Door closed.
+elevator 1: Door is closed on floor 0.
+elevator 5: Reached floor 1
+elevator 5: Motor stopped.
+elevator 5: Stopped.  
+elevator 5: Door open.
+elevator 5: Door is open on floor 1.
+elevator 1: Moving from floor 0 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 5: All stops handled.  Idling.
+Request for elevator going DOWN made at floor 2
+Best Elevator is: 5
+Stop added at 2
+elevator 5: Door closed.
+elevator 5: Door is closed on floor 1.
+elevator 1: Reached floor 1
+elevator 1: Moving from floor 1 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 5: Moving from floor 1 in direction 1
+elevator 5: Motor moving, sleeping to cause delay....
+Request for elevator going DOWN made at floor 4
+Best Elevator is: 2
+Stop added at 4
+elevator 2: Door closed.
+elevator 2: Door is closed on floor 0.
+elevator 1: Reached floor 2
+elevator 5: Reached floor 2
+elevator 1: Moving from floor 2 in direction 1
+elevator 1: Motor moving, sleeping to cause delay....
+elevator 5: Motor stopped.
+elevator 5: Stopped.  
+elevator 5: Door open.
+elevator 5: Door is open on floor 2.
+elevator 2: Moving from floor 0 in direction 1
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 3: Stop requested at floor 8
+elevator 5: All stops handled.  Idling.
+elevator 3: Door closed.
+elevator 3: Door is closed on floor 0.
+elevator 1: Reached floor 3
+elevator 2: Reached floor 1
+elevator 3: Moving from floor 0 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 1: Motor stopped.
+elevator 1: Stopped.  
+elevator 2: Moving from floor 1 in direction 1
+elevator 1: Door open.
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 1: Door is open on floor 3.
+elevator 1: All stops handled.  Idling.
+elevator 3: Reached floor 1
+elevator 3: Moving from floor 1 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 2: Reached floor 2
+elevator 2: Moving from floor 2 in direction 1
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 3: Reached floor 2
+elevator 3: Moving from floor 2 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 2: Reached floor 3
+elevator 2: Moving from floor 3 in direction 1
+elevator 2: Motor moving, sleeping to cause delay....
+elevator 3: Reached floor 3
+elevator 3: Moving from floor 3 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 2: Reached floor 4
+elevator 2: Motor stopped.
+elevator 2: Stopped.  
+elevator 2: Door open.
+elevator 2: Door is open on floor 4.
+elevator 2: All stops handled.  Idling.
+elevator 3: Reached floor 4
+elevator 3: Moving from floor 4 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 3: Reached floor 5
+elevator 3: Moving from floor 5 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 3: Reached floor 6
+elevator 3: Moving from floor 6 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 3: Reached floor 7
+elevator 3: Moving from floor 7 in direction 1
+elevator 3: Motor moving, sleeping to cause delay....
+elevator 3: Reached floor 8
+elevator 3: Motor stopped.
+elevator 3: Stopped.  
+elevator 3: Door open.
+elevator 3: Door is open on floor 8.
+Elevator going DOWN has arrived at floor 8.
+elevator 3: All stops handled.  Idling.
+Shutting down the system.

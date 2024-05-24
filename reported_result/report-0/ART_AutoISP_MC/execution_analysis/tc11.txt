@@ -1,0 +1,477 @@
+
+C1.	ElevatorGroup.getGroup
+|__ P1 (1)	[@condition:28, ElevatorGroup.<init>]
+|__ P2 (16)	[@condition:32]
+
+C2.	ElevatorGroup.<init>
+|__ P1 (1)	[]
+
+C3.	ElevatorGroup.startGroup
+|__ P1 (1)	[@inside_loop(3):95, @end_loop(3):100, @inside_loop(4):102, @end_loop(4):109]
+
+C4.	ElevatorGroup.startGroup -> @inside_loop(3):95
+|__ P1 (13)	[Floor.<init>, Floor.getSensor, FloorInterface.<init>]
+
+C5.	Floor.<init>
+|__ P1 (1)	[@condition:43, ArrivalSensor.<init>]
+|__ P2 (12)	[ArrivalSensor.<init>]
+
+C6.	ArrivalSensor.<init>
+|__ P1 (13)	[]
+
+C7.	Floor.getSensor
+|__ P1 (29)	[]
+
+C8.	FloorInterface.<init>
+|__ P1 (13)	[]
+
+C9.	ElevatorGroup.startGroup -> @inside_loop(4):102
+|__ P1 (7)	[Elevator.<init>, Elevator.getElevatorID, ElevatorInterface.<init>, ElevatorGroup.startThread]
+
+C10.	Elevator.<init>
+|__ P1 (7)	[Floor.getNoFloors, Floor.selectFloor, Floor.getNoFloors, @inside_loop(0):57, @end_loop(0):61]
+
+C11.	Floor.getNoFloors
+|__ P1 (111)	[]
+
+C12.	Floor.selectFloor
+|__ P1 (132)	[@condition:58]
+
+C13.	Elevator.<init> -> @inside_loop(0):57
+|__ P1 (91)	[Floor.selectFloor, Floor.getFloorID, Floor.getNoFloors]
+
+C14.	Floor.getFloorID
+|__ P1 (234)	[]
+
+C15.	Elevator.getElevatorID
+|__ P1 (41)	[]
+
+C16.	ElevatorInterface.<init>
+|__ P1 (7)	[Elevator.getElevatorID]
+
+C17.	ElevatorGroup.startThread
+|__ P1 (7)	[@condition:62]
+
+C18.	ElevatorGroup.getFloorInterface
+|__ P1 (4)	[@condition:141]
+
+C19.	FloorInterface.requestDown
+|__ P1 (2)	[@condition:54, FloorControl.<init>, FloorControl.requestDown]
+
+C20.	FloorControl.<init>
+|__ P1 (20)	[]
+
+C21.	FloorControl.requestDown
+|__ P1 (2)	[Floor.selectFloor, Floor.requestDown]
+
+C22.	Floor.requestDown
+|__ P1 (2)	[Elevator.getBestElevator, Elevator.getFloor, Floor.getFloorID, Floor.getFloorID, @condition:116, Elevator.getElevatorID, Elevator.addStop]
+
+C23.	Elevator.getBestElevator
+|__ P1 (4)	[@inside_loop(1):84, @end_loop(1):123]
+
+C24.	Elevator.getBestElevator -> @inside_loop(1):84
+|__ P1 (18)	[Elevator.getState, Elevator.getState, Elevator.getState, @condition:95, Elevator.getFloor, Floor.getFloorID, Elevator.getFloor, Floor.getFloorID]
+|__ P2 (4)	[@condition:87]
+|__ P3 (3)	[Elevator.getState, Elevator.getState, @condition:91]
+|__ P4 (2)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, @condition:103, Elevator.getFloor, Floor.getFloorID, @condition:105, Elevator.getFloor, Floor.getFloorID, @condition:110, Elevator.getFloor, Floor.getFloorID, Elevator.getFloor, Floor.getFloorID]
+|__ P5 (1)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, @condition:103, Elevator.getFloor, Floor.getFloorID, @condition:105, Elevator.getFloor, Floor.getFloorID, @condition:107]
+
+C25.	Elevator.getState
+|__ P1 (75)	[]
+
+C26.	Elevator.getFloor
+|__ P1 (78)	[]
+
+C27.	Elevator.addStop
+|__ P1 (4)	[@condition:324, @condition:326, Floor.getFloorID, @condition:328, @condition:332, Floor.getFloorID, @condition:334]
+|__ P2 (1)	[@condition:324, @condition:326, Floor.getFloorID, @condition:328]
+|__ P3 (1)	[@condition:349]
+|__ P4 (5)	[@condition:349, @condition:351]
+
+C28.	FloorInterface.requestUp
+|__ P1 (2)	[@condition:33, FloorControl.<init>, FloorControl.requestUp]
+
+C29.	FloorControl.requestUp
+|__ P1 (2)	[Floor.selectFloor, Floor.requestUp]
+
+C30.	Floor.requestUp
+|__ P1 (2)	[Elevator.getBestElevator, Elevator.getFloor, Floor.getFloorID, Floor.getFloorID, @condition:89, Elevator.getElevatorID, Elevator.addStop]
+
+C31.	ElevatorGroup.getElevatorInterface
+|__ P1 (1)	[@condition:157]
+
+C32.	ElevatorInterface.requestStop
+|__ P1 (1)	[@condition:55, ElevatorControl.<init>, ElevatorControl.requestStop, ElevatorGroup.elevatorDisplay]
+
+C33.	ElevatorControl.<init>
+|__ P1 (1)	[Elevator.selectElevator, ElevatorInterface.getFromList]
+|__ P2 (22)	[ElevatorInterface.getFromList]
+
+C34.	Elevator.selectElevator
+|__ P1 (49)	[]
+
+C35.	ElevatorInterface.getFromList
+|__ P1 (23)	[ElevatorControl.getElevator, Elevator.getElevatorID, @inside_loop(5):35]
+
+C36.	ElevatorControl.getElevator
+|__ P1 (23)	[]
+
+C37.	ElevatorInterface.getFromList -> @inside_loop(5):35
+|__ P1 (23)	[@condition:38]
+|__ P2 (13)	[]
+
+C38.	ElevatorControl.requestStop
+|__ P1 (1)	[Elevator.addStop]
+
+C39.	ElevatorGroup.elevatorDisplay
+|__ P1 (91)	[]
+
+C40.	ElevatorGroup.stopGroup
+|__ P1 (1)	[@inside_loop(2):76, @end_loop(2):83, Floor.removeFloors, Elevator.removeAllElevators]
+
+C41.	ElevatorGroup.stopGroup -> @inside_loop(2):76
+|__ P1 (7)	[@condition:78, Elevator.turnOff]
+
+C42.	Elevator.turnOff
+|__ P1 (7)	[]
+
+C43.	Floor.removeFloors
+|__ P1 (1)	[]
+
+C44.	Elevator.removeAllElevators
+|__ P1 (1)	[]
+
+C45.	Elevator.moveElevator
+|__ P1 (6)	[@condition:197, ElevatorGroup.elevatorDisplay, Elevator.closeDoor, @condition:202, Elevator.motorMoveUp, @end_loop(6):219, Elevator.getNextDestination]
+
+C46.	Elevator.closeDoor
+|__ P1 (6)	[Elevator.getFloor, Floor.getFloorID, ElevatorGroup.elevatorDisplay]
+
+C47.	Elevator.motorMoveUp
+|__ P1 (16)	[ElevatorControl.<init>, ElevatorControl.motorMoveUp]
+
+C48.	ElevatorControl.motorMoveUp
+|__ P1 (16)	[ElevatorInterface.motorMoveUp]
+
+C49.	ElevatorInterface.motorMoveUp
+|__ P1 (16)	[ElevatorGroup.getGroup, Elevator.selectElevator, Elevator.getFloor, Floor.getFloorID, ElevatorGroup.motorMoving]
+
+C50.	ElevatorGroup.motorMoving
+|__ P1 (16)	[ElevatorGroup.elevatorDisplay, ElevatorGroup.elevatorDisplay, FloorInterface.stopAtThisFloor]
+
+C51.	FloorInterface.stopAtThisFloor
+|__ P1 (16)	[FloorControl.<init>, FloorControl.stopAtThisFloor]
+
+C52.	FloorControl.stopAtThisFloor
+|__ P1 (2)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:67, Elevator.getDirection, Elevator.getDirection, @condition:75, Floor.requestUpMade, @condition:77, Floor.requestUpServiced]
+|__ P2 (10)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor]
+|__ P3 (3)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:67, Elevator.getDirection, Elevator.getDirection, @condition:75, Floor.requestUpMade]
+|__ P4 (1)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:64, Floor.requestDownServiced]
+
+C53.	ArrivalSensor.stopAtThisFloor
+|__ P1 (16)	[Elevator.selectElevator, Elevator.notifyNewFloor]
+
+C54.	Elevator.notifyNewFloor
+|__ P1 (1)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, Floor.requestUpMade, @condition:141, Elevator.stopElevator]
+|__ P2 (10)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, Floor.requestUpMade, Floor.requestDownMade, @condition:149, @condition:151, Elevator.motorMoveUp]
+|__ P3 (5)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, @condition:137, Elevator.stopElevator]
+
+C55.	Floor.requestUpMade
+|__ P1 (13)	[@condition:138]
+|__ P2 (3)	[@condition:135]
+
+C56.	Floor.requestDownMade
+|__ P1 (9)	[@condition:153]
+|__ P2 (1)	[@condition:150]
+
+C57.	Elevator.stopElevator
+|__ P1 (6)	[Floor.getFloorID, Elevator.addStop, Elevator.motorStop, ElevatorGroup.elevatorDisplay, ElevatorGroup.elevatorDisplay, Elevator.openDoor]
+
+C58.	Elevator.motorStop
+|__ P1 (6)	[ElevatorControl.<init>, ElevatorControl.motorStop]
+
+C59.	ElevatorControl.motorStop
+|__ P1 (6)	[ElevatorInterface.motorStop]
+
+C60.	ElevatorInterface.motorStop
+|__ P1 (6)	[ElevatorGroup.elevatorDisplay]
+
+C61.	Elevator.openDoor
+|__ P1 (6)	[Elevator.getFloor, Floor.getFloorID, ElevatorGroup.elevatorDisplay]
+
+C62.	Elevator.getDirection
+|__ P1 (10)	[]
+
+C63.	Floor.requestUpServiced
+|__ P1 (2)	[]
+
+C64.	Elevator.getNextDestination
+|__ P1 (6)	[@inside_loop(7):229]
+
+C65.	Elevator.getNextDestination -> @inside_loop(7):229
+|__ P1 (2)	[@condition:237, Floor.getFloorID, Floor.selectFloor, @inside_loop(8):240]
+|__ P2 (4)	[@condition:231, ElevatorGroup.elevatorDisplay]
+
+C66.	Elevator.getNextDestination -> @inside_loop(8):240
+|__ P1 (2)	[@condition:242, ElevatorGroup.elevatorDisplay]
+|__ P2 (12)	[@condition:247, Floor.selectFloor]
+
+C67.	Floor.requestDownServiced
+|__ P1 (1)	[]
+
+**********************************************************************************************
+
+After:
+
+C1.	ElevatorGroup.getGroup
+|__ P1 (12)	[@condition:28, ElevatorGroup.<init>]
+|__ P2 (183)	[@condition:32]
+
+C2.	ElevatorGroup.<init>
+|__ P1 (12)	[]
+
+C3.	ElevatorGroup.startGroup
+|__ P1 (12)	[@inside_loop(3):95, @end_loop(3):100, @inside_loop(4):102, @end_loop(4):109]
+
+C4.	ElevatorGroup.startGroup -> @inside_loop(3):95
+|__ P1 (108)	[Floor.<init>, Floor.getSensor, FloorInterface.<init>]
+
+C5.	Floor.<init>
+|__ P1 (12)	[@condition:43, ArrivalSensor.<init>]
+|__ P2 (96)	[ArrivalSensor.<init>]
+
+C6.	ArrivalSensor.<init>
+|__ P1 (108)	[]
+
+C7.	Floor.getSensor
+|__ P1 (291)	[]
+
+C8.	FloorInterface.<init>
+|__ P1 (108)	[]
+
+C9.	ElevatorGroup.startGroup -> @inside_loop(4):102
+|__ P1 (53)	[Elevator.<init>, Elevator.getElevatorID, ElevatorInterface.<init>, ElevatorGroup.startThread]
+
+C10.	Elevator.<init>
+|__ P1 (53)	[Floor.getNoFloors, Floor.selectFloor, Floor.getNoFloors, @inside_loop(0):57, @end_loop(0):61]
+
+C11.	Floor.getNoFloors
+|__ P1 (625)	[]
+
+C12.	Floor.selectFloor
+|__ P1 (837)	[@condition:58]
+|__ P2 (10)	[@condition:61]
+
+C13.	Elevator.<init> -> @inside_loop(0):57
+|__ P1 (471)	[Floor.selectFloor, Floor.getFloorID, Floor.getNoFloors]
+
+C14.	Floor.getFloorID
+|__ P1 (1662)	[]
+
+C15.	Elevator.getElevatorID
+|__ P1 (386)	[]
+
+C16.	ElevatorInterface.<init>
+|__ P1 (53)	[Elevator.getElevatorID]
+
+C17.	ElevatorGroup.startThread
+|__ P1 (53)	[@condition:62]
+
+C18.	ElevatorGroup.getFloorInterface
+|__ P1 (38)	[@condition:141]
+
+C19.	FloorInterface.requestDown
+|__ P1 (22)	[@condition:54, FloorControl.<init>, FloorControl.requestDown]
+
+C20.	FloorControl.<init>
+|__ P1 (221)	[]
+
+C21.	FloorControl.requestDown
+|__ P1 (22)	[Floor.selectFloor, Floor.requestDown]
+
+C22.	Floor.requestDown
+|__ P1 (2)	[Elevator.getBestElevator, @condition:113]
+|__ P2 (18)	[Elevator.getBestElevator, Elevator.getFloor, Floor.getFloorID, Floor.getFloorID, @condition:116, Elevator.getElevatorID, Elevator.addStop]
+|__ P3 (2)	[Elevator.getBestElevator, Elevator.getFloor, Floor.getFloorID, Floor.getFloorID, @condition:122, Elevator.addStop]
+
+C23.	Elevator.getBestElevator
+|__ P1 (38)	[@inside_loop(1):84, @end_loop(1):123]
+
+C24.	Elevator.getBestElevator -> @inside_loop(1):84
+|__ P1 (86)	[Elevator.getState, Elevator.getState, Elevator.getState, @condition:95, Elevator.getFloor, Floor.getFloorID, Elevator.getFloor, Floor.getFloorID]
+|__ P2 (38)	[@condition:87]
+|__ P3 (11)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState]
+|__ P4 (16)	[Elevator.getState, Elevator.getState, @condition:91]
+|__ P5 (7)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, @condition:103, Elevator.getFloor, Floor.getFloorID, @condition:105, Elevator.getFloor, Floor.getFloorID, @condition:110, Elevator.getFloor, Floor.getFloorID, Elevator.getFloor, Floor.getFloorID]
+|__ P6 (2)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, @condition:103, Elevator.getFloor, Floor.getFloorID, @condition:105, Elevator.getFloor, Floor.getFloorID, @condition:107]
+|__ P7 (1)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, @condition:103, Elevator.getFloor, Floor.getFloorID]
+|__ P8 (3)	[Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, Elevator.getState, @condition:103, Elevator.getFloor, Floor.getFloorID, @condition:105, Elevator.getFloor, Floor.getFloorID, @condition:110, Elevator.getFloor, Floor.getFloorID, Elevator.getFloor, Floor.getFloorID, @condition:116]
+|__ P9 (2)	[Elevator.getState, Elevator.getState, Elevator.getState, @condition:95, Elevator.getFloor, Floor.getFloorID, Elevator.getFloor, Floor.getFloorID, @condition:99]
+
+C25.	Elevator.getState
+|__ P1 (416)	[]
+
+C26.	Elevator.getFloor
+|__ P1 (537)	[]
+
+C27.	ElevatorGroup.getElevatorInterface
+|__ P1 (22)	[@condition:157]
+
+C28.	ElevatorInterface.requestStop
+|__ P1 (22)	[@condition:55, ElevatorControl.<init>, ElevatorControl.requestStop, ElevatorGroup.elevatorDisplay]
+
+C29.	ElevatorControl.<init>
+|__ P1 (22)	[Elevator.selectElevator, ElevatorInterface.getFromList]
+|__ P2 (234)	[ElevatorInterface.getFromList]
+
+C30.	Elevator.selectElevator
+|__ P1 (571)	[]
+
+C31.	ElevatorInterface.getFromList
+|__ P1 (256)	[ElevatorControl.getElevator, Elevator.getElevatorID, @inside_loop(5):35]
+
+C32.	ElevatorControl.getElevator
+|__ P1 (256)	[]
+
+C33.	ElevatorInterface.getFromList -> @inside_loop(5):35
+|__ P1 (256)	[@condition:38]
+|__ P2 (387)	[]
+
+C34.	ElevatorControl.requestStop
+|__ P1 (22)	[Elevator.addStop]
+
+C35.	Elevator.addStop
+|__ P1 (31)	[@condition:324, @condition:326, Floor.getFloorID, @condition:328, @condition:332, Floor.getFloorID, @condition:334]
+|__ P2 (44)	[@condition:349, @condition:351]
+|__ P3 (7)	[@condition:349]
+|__ P4 (7)	[@condition:324, @condition:326, Floor.getFloorID, Elevator.getState, @condition:344, ElevatorGroup.elevatorDisplay]
+|__ P5 (4)	[@condition:324, @condition:326, Floor.getFloorID, Elevator.getState, @condition:328]
+|__ P6 (2)	[@condition:324]
+|__ P7 (9)	[@condition:324, @condition:326, Floor.getFloorID, @condition:328]
+
+C36.	ElevatorGroup.elevatorDisplay
+|__ P1 (935)	[]
+
+C37.	FloorInterface.requestUp
+|__ P1 (16)	[@condition:33, FloorControl.<init>, FloorControl.requestUp]
+
+C38.	FloorControl.requestUp
+|__ P1 (16)	[Floor.selectFloor, Floor.requestUp]
+
+C39.	Floor.requestUp
+|__ P1 (6)	[Elevator.getBestElevator, Elevator.getFloor, Floor.getFloorID, Floor.getFloorID, @condition:89, Elevator.getElevatorID, Elevator.addStop]
+|__ P2 (5)	[Elevator.getBestElevator, @condition:86]
+|__ P3 (5)	[Elevator.getBestElevator, Elevator.getFloor, Floor.getFloorID, Floor.getFloorID, @condition:95, Elevator.addStop]
+
+C40.	ElevatorGroup.stopGroup
+|__ P1 (12)	[@inside_loop(2):76, @end_loop(2):83, Floor.removeFloors, Elevator.removeAllElevators]
+
+C41.	ElevatorGroup.stopGroup -> @inside_loop(2):76
+|__ P1 (53)	[@condition:78, Elevator.turnOff]
+
+C42.	Elevator.turnOff
+|__ P1 (53)	[]
+
+C43.	Floor.removeFloors
+|__ P1 (12)	[]
+
+C44.	Elevator.removeAllElevators
+|__ P1 (12)	[]
+
+C45.	Elevator.moveElevator
+|__ P1 (42)	[@condition:197, ElevatorGroup.elevatorDisplay, Elevator.closeDoor, @condition:202, Elevator.motorMoveUp, @end_loop(6):219, Elevator.getNextDestination]
+|__ P2 (9)	[@condition:197, ElevatorGroup.elevatorDisplay, Elevator.closeDoor, @condition:205, Elevator.motorMoveDown, @end_loop(6):219, Elevator.getNextDestination]
+
+C46.	Elevator.closeDoor
+|__ P1 (51)	[Elevator.getFloor, Floor.getFloorID, ElevatorGroup.elevatorDisplay]
+
+C47.	Elevator.motorMoveUp
+|__ P1 (151)	[ElevatorControl.<init>, ElevatorControl.motorMoveUp]
+
+C48.	ElevatorControl.motorMoveUp
+|__ P1 (151)	[ElevatorInterface.motorMoveUp]
+
+C49.	ElevatorInterface.motorMoveUp
+|__ P1 (151)	[ElevatorGroup.getGroup, Elevator.selectElevator, Elevator.getFloor, Floor.getFloorID, ElevatorGroup.motorMoving]
+
+C50.	ElevatorGroup.motorMoving
+|__ P1 (183)	[ElevatorGroup.elevatorDisplay, ElevatorGroup.elevatorDisplay, FloorInterface.stopAtThisFloor]
+
+C51.	FloorInterface.stopAtThisFloor
+|__ P1 (183)	[FloorControl.<init>, FloorControl.stopAtThisFloor]
+
+C52.	FloorControl.stopAtThisFloor
+|__ P1 (6)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:67, Elevator.getDirection, Elevator.getDirection, @condition:75, Floor.requestUpMade, @condition:77, Floor.requestUpServiced]
+|__ P2 (27)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:67, Elevator.getDirection, Elevator.getDirection, @condition:75, Floor.requestUpMade]
+|__ P3 (132)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor]
+|__ P4 (9)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:64, Floor.requestDownServiced]
+|__ P5 (3)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, @condition:61, Floor.requestUpServiced]
+|__ P6 (4)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:67, Elevator.getDirection, @condition:69, Floor.requestDownMade, @condition:71, Floor.requestDownServiced]
+|__ P7 (2)	[Elevator.selectElevator, Floor.selectFloor, Floor.getSensor, ArrivalSensor.stopAtThisFloor, @condition:59, Floor.getFloorID, Floor.getFloorID, Floor.getNoFloors, @condition:67, Elevator.getDirection, @condition:69, Floor.requestDownMade]
+
+C53.	ArrivalSensor.stopAtThisFloor
+|__ P1 (183)	[Elevator.selectElevator, Elevator.notifyNewFloor]
+
+C54.	Elevator.notifyNewFloor
+|__ P1 (44)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, @condition:137, Elevator.stopElevator]
+|__ P2 (109)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, Floor.requestUpMade, Floor.requestDownMade, @condition:149, @condition:151, Elevator.motorMoveUp]
+|__ P3 (3)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, Floor.requestUpMade, @condition:141, Elevator.stopElevator]
+|__ P4 (23)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, Floor.requestUpMade, Floor.requestDownMade, @condition:149, @condition:154, Elevator.motorMoveDown]
+|__ P5 (4)	[Floor.getFloorID, ElevatorGroup.elevatorDisplay, Floor.getFloorID, Floor.requestUpMade, Floor.requestDownMade, @condition:145, Elevator.stopElevator]
+
+C55.	Elevator.stopElevator
+|__ P1 (51)	[Floor.getFloorID, Elevator.addStop, Elevator.motorStop, ElevatorGroup.elevatorDisplay, ElevatorGroup.elevatorDisplay, Elevator.openDoor]
+
+C56.	Elevator.motorStop
+|__ P1 (51)	[ElevatorControl.<init>, ElevatorControl.motorStop]
+
+C57.	ElevatorControl.motorStop
+|__ P1 (51)	[ElevatorInterface.motorStop]
+
+C58.	ElevatorInterface.motorStop
+|__ P1 (51)	[ElevatorGroup.elevatorDisplay]
+
+C59.	Elevator.openDoor
+|__ P1 (51)	[Elevator.getFloor, Floor.getFloorID, ElevatorGroup.elevatorDisplay]
+
+C60.	Elevator.getDirection
+|__ P1 (72)	[]
+
+C61.	Floor.requestUpMade
+|__ P1 (9)	[@condition:135]
+|__ P2 (163)	[@condition:138]
+
+C62.	Floor.requestUpServiced
+|__ P1 (9)	[]
+
+C63.	Elevator.getNextDestination
+|__ P1 (51)	[@inside_loop(7):229]
+
+C64.	Elevator.getNextDestination -> @inside_loop(7):229
+|__ P1 (31)	[@condition:231, ElevatorGroup.elevatorDisplay]
+|__ P2 (20)	[@condition:237, Floor.getFloorID, Floor.selectFloor, @inside_loop(8):240]
+|__ P3 (2)	[@condition:237, Floor.getFloorID, Floor.selectFloor, @end_loop(8):251, Floor.selectFloor, @condition:253]
+|__ P4 (3)	[@condition:237, Floor.getFloorID, Floor.selectFloor, @inside_loop(8):240, @end_loop(8):251, Floor.selectFloor, @condition:253]
+
+C65.	Floor.requestDownMade
+|__ P1 (119)	[@condition:153]
+|__ P2 (23)	[@condition:150]
+
+C66.	Elevator.getNextDestination -> @inside_loop(8):240
+|__ P1 (20)	[@condition:242, ElevatorGroup.elevatorDisplay]
+|__ P2 (72)	[@condition:247, Floor.selectFloor]
+
+C67.	Floor.requestDownServiced
+|__ P1 (13)	[]
+
+C68.	Elevator.motorMoveDown
+|__ P1 (32)	[ElevatorControl.<init>, ElevatorControl.motorMoveDown]
+
+C69.	ElevatorControl.motorMoveDown
+|__ P1 (32)	[ElevatorInterface.motorMoveDown]
+
+C70.	ElevatorInterface.motorMoveDown
+|__ P1 (32)	[ElevatorGroup.getGroup, Elevator.selectElevator, Elevator.getFloor, Floor.getFloorID, ElevatorGroup.motorMoving]
+
+
