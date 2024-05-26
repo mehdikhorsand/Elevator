@@ -360,7 +360,7 @@ public class Elevator implements Runnable {
         //ElevatorGroup.elevatorDisplay(elevatorID + 1, "running.");
         while (running) {
             try {
-                if (this.state == Elevator.IDLE) {
+                if (this.state == Elevator.IDLE && this.nStops == 0) {
                     Thread.sleep(1);
                     //If you're idle, sleep for a short time.
                 } else {

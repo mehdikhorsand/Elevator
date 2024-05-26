@@ -12,14 +12,14 @@ import tools.Terminal;
 
 public class TestCaseRunner{
     @Test
-    public void tester () {
+    public void tester () throws Exception {
         for(int i = 0; i< Settings.testcase_number; i++) {
             // for automate testing...
             new TCRunner(Settings.get_target_testcase_path(i), Settings.get_target_output_path(i));
             // for manual testing...
 //            new TCRunner("reported_result/report-0/RT/testcases/tc" + i + ".txt",
 //                    "reported_result/report-0/RT/output/tc" + i + ".txt");
-//            Evaluation.evaluation(Settings.get_target_output_path(i), Settings.get_target_oracle_path(i));
+//            Evaluation.evaluation(Settings.get_target_output_path(i));
         }
     }
 

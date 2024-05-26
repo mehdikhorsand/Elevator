@@ -1,7 +1,0 @@
-StartGroup	2	1
-RequestStop 1 0
-RequestStop 0 0
-RequestStop 0 0
-RequestStop 1 0
-RequestStop 0 0
-StopGroup

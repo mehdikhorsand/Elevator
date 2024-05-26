@@ -19,14 +19,13 @@ import java.util.ArrayList;
 
 public class Settings {
     public static final int candidate_set_size = 10;
-    public static final int request_number = 5;
-    public static final int repetition_number = 1;
-
-    public static final int testcase_number = 1;
+    public static final int testcase_number = 10;
+    public static final int request_number = 8;
+    public static final int repetition_number = 100;
 
     public static final boolean f_measure_evaluation = true;
-    public static final boolean report_coverage = false;
-    public static final boolean report_mutation_result = false;
+    public static final boolean report_coverage = true;
+    public static final boolean report_mutation_result = true;
     public static final boolean just_show_avg_report = false;
 
     public static final int min_elevator_qty = 1;
@@ -44,15 +43,15 @@ public class Settings {
     public static ArrayList<SelectionMethod> get_methods() {
         ArrayList<SelectionMethod> methods = new ArrayList<>();
         methods.add(new RT());
-//        methods.add(new ART_FT());
-//        methods.add(new ART_FClustering());
-//        methods.add(new ART_WT());
-//        methods.add(new ART_WClustering());
-//        methods.add(new ART_TFC());
-//        methods.add(new ART_TFClustering());
-//        methods.add(new ART_AutoISP_1p());
-//        methods.add(new ART_AutoISP());
-//        methods.add(new ART_AutoISP_C());
+        methods.add(new ART_FT());
+        methods.add(new ART_FClustering());
+        methods.add(new ART_WT());
+        methods.add(new ART_WClustering());
+        methods.add(new ART_TFC());
+        methods.add(new ART_TFClustering());
+        methods.add(new ART_AutoISP_1p());
+        methods.add(new ART_AutoISP());
+        methods.add(new ART_AutoISP_C());
         methods.add(new ART_AutoISP_MC());
 //        methods.add(new ART_AutoISP2());
 //        methods.add(new ART_AutoISP2_C());

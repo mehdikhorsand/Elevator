@@ -25,7 +25,7 @@ public class TCCreator {
     }
 
     private static void write_and_check_test_files(int i) {
-        System.out.println(ConsoleColors.BLUE_BACKGROUND_BRIGHT + ConsoleColors.BLACK_BOLD + "testcase" + i + ": " +
+        System.out.println(ConsoleColors.WHITE_BACKGROUND + ConsoleColors.BLACK_BOLD + "testcase " + i + ": " +
                 (Settings.get_methods().size() - removed_methods.size()) + " methods left." + ConsoleColors.RESET);
         double start_creating_candidates_time = System.currentTimeMillis();
         CandidateSet candidate_set = new CandidateSet();
@@ -36,6 +36,7 @@ public class TCCreator {
         double end_running_candidates = System.currentTimeMillis();
         for(SelectionMethod method : Settings.get_methods()){
             if(!method_is_removed(method)) {
+                System.out.println(ConsoleColors.BLUE_BOLD + method.get_name() + ConsoleColors.RESET);
                 double start_testcase_selection_time = System.currentTimeMillis();
                 select_testcase(candidate_set, method, i);
 //                new elevatorMutated.TCRunner(Settings.get_testcase_path(method, i), Settings.get_output_path(method, i));

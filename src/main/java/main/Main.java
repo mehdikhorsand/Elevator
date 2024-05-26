@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         clean_required_paths();
         for(int i=0; i<Settings.repetition_number; i++) {
+            print_progress(i, "");
             TCCreator.create_testcase_files();
             String target = Settings.temp + Settings.target_method;
             for(SelectionMethod method : Settings.get_methods()) {
@@ -47,7 +48,7 @@ public class Main {
     }
 
     private static void print_progress(int i, String method) {
-        System.out.println(ConsoleColors.YELLOW_BOLD + "------------ round " + (i+1) + " " + method + " ------------" +
+        System.out.println(ConsoleColors.WHITE_BACKGROUND + ConsoleColors.BLACK_BOLD + "------------ round " + (i+1) + " " + method + " ------------\n" +
                 ConsoleColors.RESET);
     }
 

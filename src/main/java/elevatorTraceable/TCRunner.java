@@ -84,9 +84,18 @@ public class TCRunner {
                 break;
             case "StopGroup":
                 Thread.sleep(100);
+                int counter = 0;
                 for(Elevator elevator : ElevatorGroup.e) {
-                    while(elevator.nStops > 0 || elevator.state != Elevator.IDLE)
+                    while(elevator.nStops > 0 || elevator.state != Elevator.IDLE) {
+                        if(counter == 200) {
+                            System.out.println(ConsoleColors.PURPLE + "running time limit reached." + ConsoleColors.RESET);
+                            elevator.nStops = 0;
+                            elevator.state = Elevator.IDLE;
+                            break;
+                        }
                         Thread.sleep(5);
+                        counter ++;
+                    }
                 }
                 elevatorGroup.stopGroup();
 //                for(Thread th : ElevatorGroup.elevatorThread) {

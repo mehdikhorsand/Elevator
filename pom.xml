@@ -66,7 +66,7 @@
                         <exclude>tools/**</exclude>
                         <exclude>matchingEngine/**</exclude>
                         <exclude>randomRequest/**</exclude>
-                        <exclude>elevatorPlusStack/**</exclude>
+                        <exclude>elevatorTraceable/**</exclude>
                         <exclude>elevatorMutated/**</exclude>
                         <exclude>elevator/TCRunner.*</exclude>
                         <exclude>elevatorInstrumented/**</exclude>
